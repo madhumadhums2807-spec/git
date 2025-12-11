@@ -1,0 +1,29 @@
+.box{
+    height: 1000px;
+    width: 500px;
+    background-color: azure;
+    margin: 5px;
+    border: 2px solid black;
+    padding: 5px;
+    text-align: center;
+    justify-content: center;
+    height: 96vh;
+    box-shadow: 0px 0px 20px currentColor;
+    
+    
+}
+
+img{
+    height: 200px;
+    width: 200px;
+    border-radius: 100px;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lavender;
+}

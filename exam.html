@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+</head>
+<body>
+    <div class="box">
+    <h1>Exam pass fail predictor</h1>
+    <input type="text" name="" id="name" placeholder="Enter your name">
+    <p id="result"></p>
+    <button onclick="exam()">submit</button>
+    </div>
+
+    <style>
+        body{
+            background-color: beige;
+            border: 2px;
+            border-radius: 20%;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            height: 100vh;
+        }
+        .box{
+            height: 400px;
+            width: 300px;
+            background-color: aqua;
+            border: 5px solid black;
+            padding: 10px;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            box-shadow: 0px 0px 20px yellow;
+        }
+        button{
+            background-color: cornsilk;
+            color: black;
+        }
+
+    </style>
+
+    <script>
+        function exam(){
+            var name = document.getElementById("name").value;
+            var marks = Math.floor(Math.random()*101);
+            var resultText="";
+            var resultclass="";
+            if(marks<35){
+                resultText=name +"Has failed the exam";
+                resultclass="fail";
+        }else{
+            resultclass="pass";
+            if(marks>=75){
+                resultText=name + "Passed with Distinction";
+            }
+            else if(marks>=60){
+                resultText=name +"Passed with first class";
+            }
+            else if(marks>=50){
+                resultText=name+"passed with second class";
+            }
+            else{
+                resultText=name + "Passed (Just Pass)";
+
+            }
+            }
+
+            var resultpara = document.getElementById("result");
+            resultpara.innerHTML = resultText;
+            resultpara.className = resultclass;
+        }
+
+
+        
+           
+    </script>
+</body>
+</html>

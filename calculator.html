@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <div class="box">
+    <h1>LOVE CALCULATOR</h1>
+    <input type="text" name="" id="name1" placeholder=" Enter person name1:">
+    <input type="text" name="" id="name2" placeholder=" Enter person name2:">
+    <button onclick="calc()">calculator</button>
+    <p id="output"></p>
+    </div>
+
+    <style>
+        body{
+            background-image: url("https://tse3.mm.bing.net/th/id/OIP.Rx8nksQIvMuJbv8oq3-oAAHaE7?pid=Api&P=0&h=180");
+            background-size: cover;
+            margin: 0px;
+            padding: 0%;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            height: 100vh;
+            align-content: center;
+            text-align: center;
+
+        }
+
+        div{
+            height: 250px;
+            width: 500px;
+            backdrop-filter: blur(10px);
+            background-position: center;
+            border: 1px solid black;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            box-shadow: 0px 0px 20px maroon;
+            
+        }
+        button{
+            background-color: rgb(144, 10, 32);
+            color: black;
+        }
+    </style>
+    <script>
+        function calc(){
+            var name1 = document.getElementById("name1").value;
+            var name2 = document.getElementById("name2").value;
+            var resultText="";
+            var resultclass="";
+
+            var lovescore = Math.floor(Math.random()*101);
+
+            if(lovescore >70){
+                resultText = "your match is perfect💕";
+            }else if(lovescore > 30){
+                resultText = "There is a chance ❤️";
+            }
+            else{
+                resultText = "Wish you good luck 👍";
+            }
+
+            var resultpara = document.getElementById("output");
+            resultpara.innerHTML=resultText;
+            resultpara.className=resultclass;
+
+
+        }
+    </script>
+</body>
+</html>
