@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+        html,body{
+            height: 100%;
+        }
+        body{
+            margin: 0;
+            overflow: hidden;
+            background: linear-gradient(180deg,white,skyblue);
+            text-align: center;
+        }
+        #bird{
+            position: absolute;
+            left: 100px;
+            top: 200px;
+            font-size: 100px;
+        }
+
+        #scorebox{
+            margin: 10px;
+            font-style: italic;
+            font-weight: bold;
+        }
+        .pipe{
+            position: absolute;
+            width: 70px;
+            background: brown;
+        }
+    </style>
+
+</body>
+     <p id="scorebox">score : 0 </p>
+     <div id="bird">🦅</div>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+     <script src="birdscript.js"></script>
+
+</html>
